@@ -38,6 +38,7 @@ public class JDBCSpringSecurityConfig extends WebSecurityConfigurerAdapter{
 		.authenticationEntryPoint(authenticationEntryPoint)
 		.and()
 		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.NEVER);
+		
 	}
 	
 	@Override
