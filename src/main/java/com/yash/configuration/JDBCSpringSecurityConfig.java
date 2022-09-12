@@ -39,7 +39,7 @@ public class JDBCSpringSecurityConfig extends WebSecurityConfigurerAdapter{
 		.httpBasic()
 		.authenticationEntryPoint(authenticationEntryPoint)
 		.and()
-		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED);
+		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.NEVER);
 		
 	}
 	
