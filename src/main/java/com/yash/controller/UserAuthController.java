@@ -102,8 +102,8 @@ public class UserAuthController {
 			@RequestBody UserRequest userRequest,
 			Errors errors)
 	{
-		System.out.println(userRequest);
-		System.out.println("Method called");
+//		System.out.println(userRequest);
+//		System.out.println("Method called");
 		ResponseEntity<UserResponse> responseEntity=null;
 		userRequest.setRegisteredOn(LocalDateTime.now());
 		userRequest.setLastLogin(LocalDateTime.now());		
@@ -112,7 +112,7 @@ public class UserAuthController {
 		
 		if(errors.hasErrors())
 		{
-			System.out.println("Has errors");
+//			System.out.println("Has errors");
 			FieldError fieldError = errors.getFieldError();
 			UserDataErrors dataErrors = new UserDataErrors();
 			dataErrors.setErrorCode(fieldError.getCode());
@@ -155,7 +155,7 @@ public class UserAuthController {
 				System.out.println("Status code : "+responseEntity.getStatusCodeValue());
 			}
 		}
-		System.out.println("Status code : "+responseEntity.getStatusCodeValue());
+//		System.out.println("Status code : "+responseEntity.getStatusCodeValue());
 		return responseEntity;
 	}
 	
