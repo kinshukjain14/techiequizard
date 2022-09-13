@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yash.exception.QuestionParsingException;
@@ -21,7 +22,7 @@ import com.yash.service.QuizServices;
 
 @RestController
 @RequestMapping("api")
-@CrossOrigin(origins = "*",allowedHeaders = "*",allowCredentials = "true")
+@CrossOrigin(origins = "*",allowedHeaders = "*",allowCredentials = "true",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT})
 @EnableAspectJAutoProxy
 public class QuizQuestionController {
 	@Autowired

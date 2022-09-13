@@ -23,7 +23,7 @@ import com.yash.service.QuizScoreServices;
 
 @RestController
 @RequestMapping("store")
-@CrossOrigin(origins = "*",allowedHeaders = "*",allowCredentials = "true")
+@CrossOrigin(origins = "*",allowedHeaders = "*",allowCredentials = "true",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT})
 @EnableAspectJAutoProxy
 public class QuizScoreController {
 	
