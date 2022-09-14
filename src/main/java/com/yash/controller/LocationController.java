@@ -21,7 +21,7 @@ import com.yash.service.LocationService;
 
 @RestController
 @RequestMapping("location")
-@CrossOrigin(origins = "*",allowedHeaders = "*",allowCredentials = "true",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT})
+@CrossOrigin(originPatterns = "*",allowedHeaders = "*",allowCredentials = "true")
 public class LocationController {
 	
 	@Autowired@Qualifier("locationServiceImpl")

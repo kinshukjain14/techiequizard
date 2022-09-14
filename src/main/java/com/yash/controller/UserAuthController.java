@@ -34,7 +34,7 @@ import com.yash.service.UserService;
 
 @RestController
 @RequestMapping("rest")
-@CrossOrigin(origins = "*" ,allowedHeaders = "*" ,allowCredentials = "true",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT})
+@CrossOrigin(originPatterns  = "*" ,allowedHeaders = "*",allowCredentials = "true")
 @EnableAspectJAutoProxy
 public class UserAuthController {
 	@Autowired@Qualifier("userServiceImpl")
