@@ -30,8 +30,6 @@ public class JDBCSpringSecurityConfig extends WebSecurityConfigurerAdapter{
 		http
 		.csrf()
 		.disable()
-		.cors()
-		.and()
 		.authorizeRequests()
 		.anyRequest()
 		.authenticated()
@@ -40,7 +38,7 @@ public class JDBCSpringSecurityConfig extends WebSecurityConfigurerAdapter{
 		.authenticationEntryPoint(authenticationEntryPoint)
 		.and()
 		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.NEVER)
-		.and();
+		.and().cors();
 		
 	}
 	
